@@ -1,0 +1,1115 @@
+@import './reset.css';
+
+:root {
+    --app-dark-blue:#1a1d28;
+    --app-blue:#3c57ff;
+    --app-blue-hover:#233ff8;
+    --app-purple-hover: #7526fd;
+    --app-light-purple: #4e2f83;
+    --app-purple:#833cff;
+    --app-light-bg: rgba(221, 221, 221, 0.5);
+    --app-border-radius: 10px;
+    --text-color: rgb(0, 0, 0, 0.8);;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: all 0.25s ease-in-out;
+}
+
+body {
+    background-color: var(--app-light-bg);
+    height: 100vh;
+    color: var(--text-color);
+}
+
+.container {
+    width: min(100% - 15px, 1180px);
+    margin-inline: auto;
+}
+
+/* -------------------------------- */
+/* Header                           */
+/* -------------------------------- */
+
+header {
+    width: 100%;
+    height: 66px;
+    overflow: hidden;
+    background-color: rgb(78, 47, 131, 0.9);
+    border: none;
+    padding: 8px 0px;
+}
+  
+.flexbox {
+    display: flex;
+}
+
+.title {
+    width: 30%;
+    height: 46px;
+}
+
+.title h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f0f4f6;
+    line-height: 56px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* form {
+    width: 14%;
+    text-align: right;
+}
+  
+form input {
+    display: inline;
+    line-height: 36px;
+    margin: 10px 0;
+}
+  
+form input[type="search"] {
+    width: 150px;
+    height: 36px;
+    padding: 0 30px 0 38px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+    color: #f0f4f6;
+    background: transparent url(../img/search-icon.png) no-repeat 10px 10px;
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    border-radius: 25px;
+    text-decoration: none;
+    background-size: 17px;
+    transition: border-color 0.25s ease-in-out;
+}
+  
+form input[type="search"]:hover {
+    border: 1px solid rgb(255, 255, 255, 0.6);
+} */
+  
+
+nav {
+    width: 70%;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 56px;
+    cursor: default;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: #f0f2f4;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--text-color);
+}
+
+nav ul li + li {
+    margin-left: 30px;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border: none;
+    text-align: right;
+    margin: 3px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile img, .profile-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+/* -------------------------------- */
+/* Adeniyi's page                     */
+/* -------------------------------- */
+
+section {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.columns {
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* -------------------------------- */
+/* Profile Info                     */
+/* -------------------------------- */
+
+.profile-info {
+    width: 260px;
+    height: 480px;
+    border: none;
+    padding: 15px 10px;
+    height: 580px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+.profile-image {
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgba(31, 30, 30, 0.5);
+    margin: 0px auto;
+    border-radius: 50%;
+}
+
+.profession {
+    height: 110px;
+    margin-top: 10px;
+    border: none;
+    text-align: center;
+}
+
+.profession p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.profession p + p, .analytics p, .upgrade p, .summary h6 {
+    color: rgb(73, 73, 73, 0.8);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.profession i {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    color: var(--app-light-purple);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.profession i:hover {
+    color: var(--app-purple-hover);
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(71, 71, 71, 0.3);
+    margin-top: 0px;
+}
+
+.analytics {
+    border: none;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.analytics .divider {
+    height: 100%;
+    width: 2px;
+}
+
+.connections, .followers {
+    width: 105px;
+    height: 90px;
+    padding: 15px 10px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+}
+
+.analytics span {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--app-dark-blue);
+}
+
+.analytics P {
+    line-height: 6px;
+}
+
+.upgrade, .export {
+    padding: 15px 10px;
+    background-color: #fff;
+    height: 150px;
+    text-align: center;
+    border-radius: var(--app-border-radius);
+}
+
+.upgrade p {
+    margin-top: 25px;
+}
+
+.upgrade button {
+    color: #fff;
+    font-size: 14px;
+    background-color: var(--app-light-purple);
+    color: #fff;
+    border: none;
+    width: 180px;
+    height: 46px;
+    padding: 10px;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--app-purple-hover);
+}
+
+.export {
+    margin: 20px auto;
+    color: var(--app-light-purple);
+    background-color: #fff;
+    border: 1px solid var(--app-light-purple);
+    height: 60px;
+    width: 230px;
+    cursor: pointer;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px; */
+}
+
+.fa-solid, .fas {
+    margin-top: 15px;
+}
+
+
+/* -------------------------------- */
+/* Post page                        */
+/* -------------------------------- */
+
+.posts {
+    width: 580px;
+    height: 100%;
+    border: none;
+    margin-inline: auto;
+}
+
+.box1 {
+    border: none;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+.header {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header p {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--app-dark-blue);
+}
+
+.header .icons {
+    width: 65px;
+    border: none;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.header .icons i {
+    border-radius: 50%;
+    border: 1px solid #000;
+    padding: 2px 6px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.header .icons i:hover {
+    color: var(--app-light-purple);
+}
+
+.social-posts {
+    margin-top: 10px;
+    height: 180px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.post {
+    width: 180px;
+    height: 150px;
+    border: none;
+    cursor: pointer;
+}
+
+.post p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 20px;
+}
+
+.post p + P {
+    margin-top: 0px;
+    font-size: 11px;
+    color:rgba(0, 0, 0, .4);
+    pointer-events: none;
+}
+
+.post p:hover {
+    color: #000;
+}
+
+/* -------------------------------- */
+/* Background                       */
+/* -------------------------------- */
+
+.background {
+    margin-top: 10px;
+    border: none;
+    height: 510px;
+    padding: 15px 15px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+.subheading {
+    border: none;
+    margin-top: 10px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+.background .subheading ~ .subheading {
+    margin-top: 35px;
+}
+
+.subheading i, .logout i {
+    border-radius: 50%;
+    border: none;
+    padding: 2px 6px;
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+}
+
+.subheading h3 {
+    margin-left: 10px;
+    color: var(--app-dark-blue);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 3px;
+}
+
+.summary {
+    margin-top: 10px;
+    border: none;
+    width: 460px;
+    padding: 0px 4px;
+    margin-inline: auto;
+}
+
+.summary p {
+    font-size: 15px;
+    text-align: left;
+}
+
+.summary p + p {
+    margin-top: 10px;
+}
+
+/* -------------------------------- */
+/* Friends                          */
+/* -------------------------------- */
+.friends {
+    width: 300px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+.friends p {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--app-dark-blue);
+}
+
+.other-users {
+    margin-top: 20px;
+    border: none;
+}
+
+.user {
+    width: 100%;
+    height: 80px;
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.image {
+    width: 55px;
+    height: 55px;
+    border: none;
+    text-align: right;
+    border-radius: 50%;
+}
+
+.user img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.userinfo {
+    border: none;
+    width: 180px;
+    height: 55px;
+    padding: 4px 10px;
+}
+
+.user:hover {
+    background-color: rgba(243, 241, 241, 0.8);
+}
+
+.userinfo p {
+    text-align: left;
+    color: var(--app-dark-blue);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.userinfo P + P {
+    color: rgb(73, 73, 73, 0.8);
+    font-size: 14px;
+}
+
+/* -------------------------------- */
+/*            logout                */
+/* -------------------------------- */
+
+.logout {
+    width: 150px;
+    height: 46px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 6%;
+    right: 8%;
+    visibility: hidden;
+    opacity: 0; 
+}
+
+.logout.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.logout i {
+    padding: 6px 7px;
+    border: none;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    color: var(--app-light-purple);
+}
+
+.logout a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logout a:hover {
+    color: var(--app-purple-hover);
+}
+
+
+/* -------------------------------- */
+/*           Footer                 */
+/* -------------------------------- */
+
+footer {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    border: none;
+    margin-top: 60px;
+    padding: 10px;
+    background-color: #1a1d28;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    border: none;
+    border-radius: var(--app-border-radius);
+    width: 100px;
+    height: 100px;
+    margin-inline: auto;
+}
+
+.social-icons {
+    height: 100px;
+    margin-inline: auto;
+    padding: 10px;
+    border: none;
+}
+  
+.social-icons ul {
+    list-style: none;
+    text-align: center;
+}
+  
+.social-icons ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+  
+.social-icons ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    color: #fff;
+    border: 1px solid rgb(255 255 255 / 0.15);
+    border-radius: var(--app-border-radius);
+}
+    
+.fa-brands:hover  {
+    color: var(--app-light-purple);
+    transition: background-color 0.25s ease-in-out;
+}
+  
+p.copyright {
+    font-size: 14px;
+    color:  #adadad;
+    opacity: 0.4;
+    font-weight: 400; 
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* -------------------------------- */
+/*          Media Queries           */
+/* -------------------------------- */
+
+@media only screen and (max-width: 1080px) {
+
+    nav {
+        width: 55%;
+    }
+
+    form input {
+        display: none;
+    }
+
+    .profile-info {
+        width: 250px;
+        padding: 15px 10px;
+        height: 580px;
+    }
+
+    .posts {
+        width: 540px;
+    }
+
+}
+
+@media only screen and (max-width: 980px) {
+
+    nav ul li, form input {
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 56px;
+    }
+
+    .profile-info {
+        width: 280px;
+        padding: 15px 10px;
+        height: 580px;
+    }
+    
+    .profession p {
+        font-size: 18px;
+    }
+    
+    .profession p + p, .analytics p, .upgrade p, .summary h6 {
+        font-size: 11px;
+    }
+    
+    .divider {
+        height: 1px;
+    }
+    
+    .analytics P {
+        line-height: 6px;
+    }
+    
+    .upgrade, .export {
+        height: 150px;
+    }
+    
+    .upgrade p {
+        margin-top: 25px;
+    }
+    
+    .upgrade button {
+        font-size: 14px;
+        width: 160px;
+        height: 46px;
+    }
+    
+    .export {
+        height: 50px;
+        width: 180px;
+    }
+
+    .export p {
+        font-size: 14px;
+    }
+
+    .posts {
+        width: 480px;
+    }
+
+    .post p {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .background {
+        margin-top: 10px;
+        height: 510px;
+        padding: 15px 15px;
+    }
+    
+    .subheading {
+        border: none;
+        margin-top: 10px;
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .background .subheading ~ .subheading {
+        margin-top: 35px;
+    }
+    
+    .subheading h3 {
+        margin-top: 2px;
+        font-size: 14px;
+        padding: 3px;
+    }
+    
+    .summary {
+        width: 400px;
+    }
+    
+    .summary p {
+        font-size: 13px;
+
+    }
+    
+    .summary p + p {
+        margin-top: 10px;
+    } 
+
+    .friends {
+        width: 380px;
+        height: 100%;
+    }
+
+    .logout {
+        top: 5%;
+        right: 10%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .profile-info {
+        width: 480px;
+        padding: 15px 10px;
+        height: 580px;
+    }
+    
+    .posts {
+        margin-inline: auto;
+        width: 480px;
+    }
+
+    .friends {
+        width: 480px;
+        height: 100%;
+    }
+
+    .analytics {
+        width: 320px;
+        margin-inline: auto;
+        height: 100px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 750px) {
+
+    .title h1 {
+        font-size: 18px;
+    }
+
+    .profile-info {
+        width: 380px;
+        padding: 15px 10px;
+        height: 580px;
+    }
+    
+    .profession p + p, .analytics p, .upgrade p, .summary h6 {
+        font-size: 13px;
+    }
+    
+    .divider {
+        height: 1px;
+    }
+
+    .analytics {
+        width: 300px;
+        margin-inline: auto;
+        height: 100px;
+    }
+    
+    .analytics P {
+        line-height: 6px;
+    }
+    
+    .upgrade, .export {
+        height: 150px;
+    }
+    
+    .upgrade p {
+        margin-top: 25px;
+    }
+    
+    .upgrade button {
+        font-size: 14px;
+        width: 160px;
+        height: 46px;
+    }
+    
+    .export {
+        height: 50px;
+        width: 180px;
+    }
+
+    .export p {
+        font-size: 14px;
+    }
+
+    .posts {
+        margin-inline: auto;
+        width: 380px;
+    }
+
+    .background {
+        height: 100%;
+    }
+    
+    .subheading {
+        border: none;
+        margin-top: 10px;
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .subheading h3 {
+        margin-top: 2px;
+        font-size: 14px;
+        padding: 3px;
+    }
+    
+    .summary {
+        width: 290px;
+    }
+    
+    .summary p {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+
+    .summary p + P {
+        margin-top: 10px;
+    }
+
+    .summary h4 {
+        font-size: 15px;
+    }
+    
+    .social-posts {
+        margin-top: 10px;
+        height: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .box1 {
+        border: none;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .post {
+        width: 250px;
+        height: 250px;
+        margin-inline: auto;
+    }
+    
+    .post p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--text-color);
+    }
+
+    .profile {
+        width: 45px;
+        height: 45px;
+        margin: 6px 15px;
+    }
+
+    .friends {
+        width: 380px;
+        height: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .profile-info {
+        width: 100%;
+        padding: 15px 10px;
+        height: 580px;
+    }
+    
+    .profession p {
+        font-size: 18px;
+    }
+    
+    .profession p + p, .analytics p, .upgrade p, .summary h6 {
+        font-size: 11px;
+    }
+    
+    .divider {
+        height: 1px;
+    }
+    
+    .analytics span {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        color: var(--app-dark-blue);
+    }
+    
+    .analytics P {
+        line-height: 6px;
+    }
+    
+    .upgrade, .export {
+        height: 150px;
+    }
+    
+    .upgrade p {
+        margin-top: 25px;
+    }
+    
+    .upgrade button {
+        font-size: 14px;
+        width: 160px;
+        height: 46px;
+    }
+    
+    .export {
+        height: 50px;
+        width: 180px;
+    }
+
+    .export p {
+        font-size: 14px;
+    }
+
+    .posts {
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    .background {
+        height: 100%;
+    }
+    
+    .subheading {
+        border: none;
+        margin-top: 10px;
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .subheading h3 {
+        margin-top: 2px;
+        font-size: 14px;
+        padding: 3px;
+    }
+    
+    .summary {
+        width: 270px;
+    }
+    
+    .summary p {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+
+    .summary p + P {
+        margin-top: 10px;
+    }
+
+    .summary h4 {
+        font-size: 15px;
+    }
+    
+    .social-posts {
+        margin-top: 10px;
+        height: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .box1 {
+        border: none;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .post {
+        width: 250px;
+        height: 100%;
+        margin-inline: auto;
+    }
+    
+    .post p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--text-color);
+    }
+
+    .profile {
+        width: 45px;
+        height: 45px;
+        margin: 6px 15px;
+    }
+    
+    .profile img, .profile-image img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%;
+    }
+
+    .friends {
+        width: 100%;
+        height: 100%;
+    }
+
+    .logout {
+        width: 130px;
+        height: 46px;
+        padding: 10px 10px;
+        top: 6%;
+        right: 8%;
+    }
+}
+
+@media only screen and (max-width:390px) {
+
+    .title h1 {
+        font-size: 19px;
+    }
+
+    .logout {
+        width: 130px;
+        height: 46px;
+        padding: 10px 10px;
+        top: 6%;
+        right: 8%;
+    }
+    
+}
+
